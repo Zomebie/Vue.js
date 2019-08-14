@@ -1,33 +1,36 @@
 <template>
   <div id="app">
-    <Header></Header>
-
-    <Article></Article>
-    <Footer></Footer>
+    <Home v-if="isAuth"></Home>
+    <Login v-else></Login>
   </div>
 </template>
 
 <script>
-import Header from "./root-component/Header.vue";
-import Article from "./root-component/Article.vue";
-import Footer from "./root-component/Footer.vue";
+import Login from "./root-component/Login";
+import Home from "./root-component/Home";
+import { mapGetters } from "vuex";
 
 export default {
   name: "app",
+
+  methods: {
+    ...mapGetters(["getIsAuth"])
+  },
   components: {
-    Header,
-    Article,
-    Footer
+    Home,
+    Login
+  },
+  computed: {
+    isAuth() {
+      return this.getIsAuth();
+    }
   }
 };
 </script>
 
 <style>
 #app {
-  /* display: flex;
-  flex-direction: column; */
-  /* height: 100vh; */
-  margin: 0 auto;
   font-family: "Love Ya Like A Sister", cursive;
+  position: relative;
 }
 </style>

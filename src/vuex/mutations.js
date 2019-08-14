@@ -1,8 +1,8 @@
 import * as types from "./mutation_types";
 
 export default {
-  [types.UID](state, uid) {
-    state.uid = uid;
+  [types.USER_ID](state, userId) {
+    state.userId = userId;
   },
   [types.ERROR_STATE](state, errorState) {
     state.errorState = errorState;

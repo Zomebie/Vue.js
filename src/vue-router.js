@@ -1,11 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import IntroSection from "./root-component/component/IntroSection.vue";
-import DailySection from "./root-component/component/DailySection.vue";
-import ToBuySection from "./root-component/component/ToBuySection.vue";
-import ToDoSection from "./root-component/component/ToDoSection.vue";
-import Login from "./root-component/component/Login.vue";
-import Logout from "./root-component/component/Logout.vue";
+import IntroSection from "./root-component/components/IntroSection.vue";
+import DailySection from "./root-component/components/DailySection.vue";
+import ToBuySection from "./root-component/components/ToBuySection.vue";
+import ToDoSection from "./root-component/components/ToDoSection.vue";
+
+import Register from "./root-component/components/Register.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -13,8 +14,7 @@ const routes = [
   { path: "/daily", component: DailySection },
   { path: "/buy", component: ToBuySection },
   { path: "/do", component: ToDoSection },
-  { path: "/login", components: { login: Login } },
-  { path: "/logout", components: { login: Logout } }
+  { path: "/register", components: Register }
 ];
 
 export default new VueRouter({

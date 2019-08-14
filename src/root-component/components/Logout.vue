@@ -1,12 +1,25 @@
 <template>
   <div id="logout">
     <p>logout</p>
-    <button>[OK]</button>
+    <button id="logoutConfirm" @click="logoutConfirm">[OK]</button>
   </div>
 </template>
 <script>
-// session out
-export default {};
+import { mapActions } from "vuex";
+
+export default {
+  methods: {
+    ...mapActions(["logout"]),
+
+    async logoutConfirm() {
+      let res = await this.logout(this.$store.getters.getUserId);
+      if (!res) {
+        alert("logout");
+        this.$router.push("/");
+      }
+    }
+  }
+};
 </script>
 <style>
 div#logout {

@@ -10,14 +10,12 @@
 
 
 <script>
-import Navigation from "./component/Navigation.vue";
-import IntroSection from "./component/IntroSection.vue";
+import Navigation from "./components/Navigation.vue";
 
 export default {
   name: "contents",
   components: {
-    Navigation,
-    IntroSection
+    Navigation
   }
 };
 </script>

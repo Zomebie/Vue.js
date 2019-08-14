@@ -42,17 +42,6 @@ export default {
       ]
     };
   }
-
-  // methods: {
-  //   clickedEffect: function({ target }) {
-  //     var alreadyClicked = document.getElementsByClassName("clicked");
-  //     var array = [...alreadyClicked];
-  //     array.forEach(e => {
-  //       e.classList = "";
-  //     });
-  //     target.classList.toggle("clicked");
-  //   }
-  // }
 };
 </script>
 <style>

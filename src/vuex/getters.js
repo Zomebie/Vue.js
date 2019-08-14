@@ -1,5 +1,5 @@
 export default {
-  getUid: state => state.uid,
+  getUserId: state => state.userId,
   getErrorState: state => state.errorState,
   getIsAuth: state => state.isAuth
 };
