@@ -1,7 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
-var pg = require("pg");
-// var nodeExternals = require("webpack-node-externals");
+
 module.exports = {
   entry: "./src/main.js",
   output: {
@@ -10,12 +9,6 @@ module.exports = {
     filename: "build.js"
   },
 
-  externals: [
-    { pg }
-    // nodeExternals({
-    //   whitelist: ["pg"]
-    // })
-  ],
   module: {
     rules: [
       {
@@ -47,7 +40,6 @@ module.exports = {
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js"
-      // pg$: path.join(__dirname, "./aliases/pg.js")
     },
 
     extensions: ["*", ".js", ".vue", ".json"]

@@ -1,7 +1,10 @@
 <template>
-  <div>daily section</div>
+  <section></section>
 </template>
+
 <script>
+export default {};
 </script>
+
 <style>
 </style>

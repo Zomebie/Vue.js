@@ -23,8 +23,9 @@
     </aside>
   </form>
 </template>
+
 <script>
-import api from "../../api/user";
+import api from "../api/user";
 
 export default {
   data() {
@@ -37,6 +38,7 @@ export default {
       registeredSnTag: ""
     };
   },
+
   methods: {
     async onSubmit() {
       const { id, sn } = await api.register(this.uid, this.password);
@@ -48,6 +50,7 @@ export default {
   }
 };
 </script>
+
 <style>
 form {
   position: absolute;
@@ -67,11 +70,13 @@ form header {
   width: 100%;
   height: 50px;
 }
+
 span#sign-up-name-tag,
 #sign-up-pass-tag {
   color: black;
   text-shadow: none;
 }
+
 #username,
 #password {
   width: 100%;

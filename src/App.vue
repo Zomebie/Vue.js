@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import Login from "./root-component/Login";
-import Home from "./root-component/Home";
+import Login from "./components/root/Login";
+import Home from "./components/root/Home";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "app",
-
-  methods: {
-    ...mapGetters(["getIsAuth"])
-  },
   components: {
     Home,
     Login
   },
+
+  methods: {
+    ...mapGetters(["getIsAuth"])
+  },
+
   computed: {
     isAuth() {
       return this.getIsAuth();
@@ -30,7 +30,10 @@ export default {
 
 <style>
 #app {
-  font-family: "Love Ya Like A Sister", cursive;
   position: relative;
+  height: 100vh;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 </style>

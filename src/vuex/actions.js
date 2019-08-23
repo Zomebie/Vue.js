@@ -14,10 +14,10 @@ let setIsAuth = ({ commit }, data) => {
 };
 
 // 로그인 결과를 vuex에 넣기
-let setResponse = (store, uid, flag) => {
+let setResponse = (store, uid, authFlag) => {
   setUserId(store, uid);
   setErrorState(store, "");
-  setIsAuth(store, flag);
+  setIsAuth(store, authFlag);
 };
 
 export default {
@@ -33,8 +33,7 @@ export default {
     // return false;
   },
 
-  logout(store, logoutId) {
-    setResponse(store, logoutId, false);
-    return store.getters.getIsAuth;
+  logout(store, userId) {
+    setResponse(store, userId, false);
   }
 };

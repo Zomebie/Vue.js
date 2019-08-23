@@ -19,6 +19,7 @@ const query = (user_name, chaincode_id, function_name, args) => {
     args
   });
 };
+
 export default {
   async invoke(uid, fn, args) {
     try {

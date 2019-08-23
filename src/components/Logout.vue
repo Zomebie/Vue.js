@@ -4,6 +4,7 @@
     <button id="logoutConfirm" @click="logoutConfirm">[OK]</button>
   </div>
 </template>
+
 <script>
 import { mapActions } from "vuex";
 
@@ -21,6 +22,7 @@ export default {
   }
 };
 </script>
+
 <style>
 div#logout {
   position: absolute;
@@ -36,6 +38,7 @@ div#logout {
   display: flex;
   flex-direction: column;
 }
+
 #logout p {
   margin-bottom: 10px;
 }
